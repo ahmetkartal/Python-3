@@ -1,7 +1,7 @@
 import sys
 
 def timeConversion(s):
-    # Complete this function
+   
     kontrol=int(s[:2])
     zaman=s[8:10]
     s=s[2:8]
