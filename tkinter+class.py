@@ -2,12 +2,37 @@ from tkinter import *
 class sayfa:
     def __init__(self,pencere):
       
-        self.button=Button(text="9",fg="Blue",command=self.mesaj(9))
+        self.button=Button(text="9",fg="Blue",command=self.mesaj)
         self.button.pack()
+        self.button1=Button(text="8",fg="Blue",command=self.mesaj)
+        self.button1.pack()
+        self.button2=Button(text="7",fg="Blue",command=self.mesaj)
+        self.button2.pack()
+        self.button3=Button(text="6",fg="Blue",command=self.mesaj)
+        self.button3.pack()
+        self.button4=Button(text="5",fg="Blue",command=self.mesaj)
+        self.button4.pack()
+        self.button5=Button(text="4",fg="Blue",command=self.mesaj)
+        self.button5.pack()
+        self.button6=Button(text="3",fg="Blue",command=self.mesaj)
+        self.button6.pack()
+        self.button7=Button(text="2",fg="Blue",command=self.mesaj)
+        self.button7.pack()
+        self.button8=Button(text="1",fg="Blue",command=self.mesaj)
+        self.button8.pack()
+        self.button9=Button(text="0",fg="Blue",command=self.mesaj)
+        self.button9.pack()
+        self.button10=Button(text="+",fg="Blue",command=self.mesaj)
+        self.button10.pack()
+        self.button11=Button(text="-",fg="Blue",command=self.mesaj)
+        self.button11.pack()
+        
+        self.entry=Entry(pencere)
+        self.entry.pack()
         self.button2=Button(text="Çıkış",fg="Red",command=self.kapat)
         self.button2.pack()
-    def mesaj(self,a):
-        print(a)
+    def mesaj(self):
+        print(self.entry.insert(0,self.button["text"]))
     def kapat(self):
         pencere.after(2000,pencere.destroy)
 pencere=Tk()
